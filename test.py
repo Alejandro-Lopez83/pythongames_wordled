@@ -5,7 +5,7 @@ icons_list = []
 letter_list= []
 
 play_word = random.choice( word_list)
-print(play_word)
+#print(play_word)
 letter_index = 0
 count_unique_letter_playword = 0
 count_letter_iterations= 0
@@ -22,17 +22,17 @@ def menu():
     print(f"*********************************************************************\n\n")
 menu()
 
-print("            The word must contain 5 letters and it is related with food\n")
+print("     The word must contain 5 letters and it is related with food\n")
 
 
-print("                    🟢 Letter is in the RIGHT position!!                                       ")
-print("                    🟠 Letter is in wrong position!!                                       ")
-print("                    🔴 Letter is not in the word or is already covered                                        ")
+print("              🟢 Letter is in the RIGHT position!!                                       ")
+print("              🟠 Letter is in wrong position!!                                       ")
+print("              🔴 Letter is not in the word or is already covered                                       \n\n\n")
 
 
 
-input('                          PRESS ENTER TO PLAY!!!!!')
-print('                        ----------------------------                         ')
+input('                       PRESS ENTER TO PLAY!!!!!')
+print('                     ---------------------------                      \n\n\n   ')
 
 
 
@@ -50,11 +50,11 @@ while try_count < 6:
             pass
     while len(user_word) !=5 or number == True:
             if len(user_word) != 5:
-                print("\n            WARNING: The word MUST HAVE 5 letters :WARNING\n")
+                print("\n        ❌ ​WARNING: The word MUST HAVE 5 letters :WARNING ❌​\n")
             elif len(user_word) != 5 and number == True:
-                print("\n            WARNING: Only letters are valid :WARNING\n")
+                print("\n        ❌ ​WARNING: Only letters are valid :WARNING ❌​\n")
             elif number == True:
-                print("\n            WARNING: Only letters are valid :WARNING\n")
+                print("\n        ❌​ WARNING: Only letters are valid :WARNING ❌​\n")
             
             user_word = input("--> Type in your guess: ").lower().strip()
             number = False
@@ -98,11 +98,11 @@ while try_count < 6:
     print(' ','  '.join(icons_list))
 
     if user_word==play_word:
-            print("\n                       ********************")
-            print("                       ********************")
-            print("                       **    YOU WIN!!   **")
-            print("                       ********************")
-            print("                       ********************\n")
+            print("\n                       **********************")
+            print("                       **********************")
+            print("                       **   🟢YOU WIN!!🟢  **")
+            print("                       ********  🏆  ********")
+            print("                       **********************\n")
             break
     
     if user_word != play_word and try_count<5:
@@ -112,10 +112,10 @@ while try_count < 6:
         print("        |                                   |\n\n")
 
     else:
-        print("\n\n                       ********************")
-        print("                       ********************")
-        print("                       **   YOU LOSE!!   **")
-        print("                       ********************")
-        print("                       ********************\n")
+        print("\n\n                       ***********************")
+        print("                       ***********************")
+        print("                       **   🔴YOU LOSE!!🔴  **")
+        print("                       ********  😤  *********")
+        print("                       ***********************\n")
 
     try_count+=1
