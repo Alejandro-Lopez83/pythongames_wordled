@@ -1,6 +1,9 @@
 import random
 
 word_list = ["bread", "fruit", "steak", "berry", "mango", "grape", "onion", "peach", "lemon", "beans"]
+icons_list = []
+letter_list= []
+
 play_word = random.choice( word_list)
 print(play_word)
 letter_index = 0
@@ -66,9 +69,7 @@ while try_count < 6:
         count_unique_letter_playword = play_word.count(i)
         count_unique_letter_userword = user_word[0:letter_index+1].count(i)
  
-
-        
-        
+              
         if i in play_word and i == play_word[letter_index]:
             print(f"The letter ", end="")
             print("|",i,"|", end="")
